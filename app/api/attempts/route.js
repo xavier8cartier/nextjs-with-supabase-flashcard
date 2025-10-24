@@ -31,3 +31,27 @@ export async function POST(request) {
     });
   return new Response(JSON.stringify(data), { status: 201 });
 }
+
+export async function DELETE(request) {
+  const { searchParams } = new URL(request.url);
+  const user_id = searchParams.get("user_id");
+
+  if (!user_id) {
+    return new Response(JSON.stringify({ error: "User ID is required" }), {
+      status: 400,
+    });
+  }
+
+  const { error } = await supabase
+    .from("attempts")
+    .delete()
+    .eq("user_id", user_id);
+
+  if (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+    });
+  }
+
+  return new Response(null, { status: 204 });
+}
