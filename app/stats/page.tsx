@@ -122,7 +122,7 @@ export default function StatsPage() {
 
     if (confirmed && data?.user?.id) {
       try {
-        const res = await fetch(`/api/attempts?user_id=${data.user.id}`, {
+        const res = await fetch(`/api/attempts`, {
           method: "DELETE",
         });
 

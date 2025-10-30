@@ -1,5 +1,8 @@
 "use client";
 
+// kategooriate haldamise leht kus saab lisada ja kustutada õppimise kategooriaid
+// iga kategooria all saab hiljem luua flashkaarte
+
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

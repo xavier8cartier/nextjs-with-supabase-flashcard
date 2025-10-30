@@ -1,5 +1,8 @@
 "use client";
 
+// flashkaartide haldamise leht kus saab lisada ja kustutada õppimiskaarte
+// kaarte saab filtreerida kategooriate järgi ja igal kaardil on küsimus ja vastus
+
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

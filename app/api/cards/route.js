@@ -1,3 +1,6 @@
+// API marsruudid flashkaartide haldamiseks (CRUD operatsioonid)
+// võimaldab kaartide lisamist, kustutamist ja pärimist Supabasist
+
 import { supabase } from "../../../lib/supabase/client";
 
 export async function GET(request) {

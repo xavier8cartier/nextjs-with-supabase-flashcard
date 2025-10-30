@@ -170,7 +170,6 @@ export default function PlayPage() {
     setCurrent(null);
   };
 
-  const isLastCard = answeredCards.size >= filteredCards.length;
   const canSubmit =
     answer.trim() !== "" &&
     !isSubmitting &&
